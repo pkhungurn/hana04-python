@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pmkg-hana04-python"
+version = "0.1.0"
+description = "A library for object extension and serialization used to write research code."
+authors = ["Pramook Khungurn <pramook@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "hana04", from = "src"},
+    {include = "hana04_test", from = "tests"},
+]
+exclude = [
+    "tests/*",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pmkg-pytasuku = {git = "https://github.com/pkhungurn/pytasuku.git"}
+pmkg-jyuusu = {git = "https://github.com/pkhungurn/jyuusu.git"}
+numpy = "^1.24.1"
+msgpack = "^1.0.4"
+makefun = "^1.15.0"
+numpy-quaternion = "^2022.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
